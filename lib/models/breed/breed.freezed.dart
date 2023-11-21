@@ -24,6 +24,7 @@ mixin _$Breed {
   String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'reference_image_id')
   String? get image => throw _privateConstructorUsedError;
+  @JsonKey(name: 'image')
   BreedImage? get breedImage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,7 +41,7 @@ abstract class $BreedCopyWith<$Res> {
       {int id,
       String name,
       @JsonKey(name: 'reference_image_id') String? image,
-      BreedImage? breedImage});
+      @JsonKey(name: 'image') BreedImage? breedImage});
 
   $BreedImageCopyWith<$Res>? get breedImage;
 }
@@ -107,7 +108,7 @@ abstract class _$$BreedImplCopyWith<$Res> implements $BreedCopyWith<$Res> {
       {int id,
       String name,
       @JsonKey(name: 'reference_image_id') String? image,
-      BreedImage? breedImage});
+      @JsonKey(name: 'image') BreedImage? breedImage});
 
   @override
   $BreedImageCopyWith<$Res>? get breedImage;
@@ -157,7 +158,7 @@ class _$BreedImpl implements _Breed {
       {required this.id,
       required this.name,
       @JsonKey(name: 'reference_image_id') this.image,
-      this.breedImage});
+      @JsonKey(name: 'image') this.breedImage});
 
   factory _$BreedImpl.fromJson(Map<String, dynamic> json) =>
       _$$BreedImplFromJson(json);
@@ -170,6 +171,7 @@ class _$BreedImpl implements _Breed {
   @JsonKey(name: 'reference_image_id')
   final String? image;
   @override
+  @JsonKey(name: 'image')
   final BreedImage? breedImage;
 
   @override
@@ -212,7 +214,7 @@ abstract class _Breed implements Breed {
       {required final int id,
       required final String name,
       @JsonKey(name: 'reference_image_id') final String? image,
-      final BreedImage? breedImage}) = _$BreedImpl;
+      @JsonKey(name: 'image') final BreedImage? breedImage}) = _$BreedImpl;
 
   factory _Breed.fromJson(Map<String, dynamic> json) = _$BreedImpl.fromJson;
 
@@ -224,6 +226,7 @@ abstract class _Breed implements Breed {
   @JsonKey(name: 'reference_image_id')
   String? get image;
   @override
+  @JsonKey(name: 'image')
   BreedImage? get breedImage;
   @override
   @JsonKey(ignore: true)

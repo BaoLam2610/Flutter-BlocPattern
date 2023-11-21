@@ -10,9 +10,9 @@ _$BreedImpl _$$BreedImplFromJson(Map<String, dynamic> json) => _$BreedImpl(
       id: json['id'] as int,
       name: json['name'] as String,
       image: json['reference_image_id'] as String?,
-      breedImage: json['breedImage'] == null
+      breedImage: json['image'] == null
           ? null
-          : BreedImage.fromJson(json['breedImage'] as Map<String, dynamic>),
+          : BreedImage.fromJson(json['image'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$BreedImplToJson(_$BreedImpl instance) =>
@@ -20,5 +20,5 @@ Map<String, dynamic> _$$BreedImplToJson(_$BreedImpl instance) =>
       'id': instance.id,
       'name': instance.name,
       'reference_image_id': instance.image,
-      'breedImage': instance.breedImage,
+      'image': instance.breedImage,
     };

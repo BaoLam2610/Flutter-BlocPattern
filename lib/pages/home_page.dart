@@ -1,10 +1,8 @@
-import 'dart:ffi';
-
-import 'package:demo_retrofit/services/breed_api.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import '../models/breed/breed.dart';
+import '../services/breed/breed_api.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
